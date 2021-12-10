@@ -38,29 +38,34 @@
     </header>
 
     <main class="main-screen">
-      <ul class="settings-list">
-        <li class="settings__setting">
-          <div class="settings__setting-column">
-            <i class="fas fa-bullhorn"></i>
-            <span>Notices</span>
-          </div>
-          <div class="settings__setting-column"></div>
-        </li>
-        <li class="settings__setting">
-          <div class="settings__setting-column">
-            <i class="fas fa-flask"></i>
-            <span>Kokoa Lab</span>
-          </div>
-          <div class="settings__setting-column"></div>
-        </li>
-        <li class="settings__setting">
-          <div class="settings__setting-column">
-            <i class="fas fa-info-circle"></i>
-            <span>Version</span>
-          </div>
-          <div class="settings__setting-column">Latest Version</div>
-        </li>
-      </ul>
+      <div class="settings">
+        <ul class="settings-list">
+          <li class="settings__setting">
+            <div class="settings__setting-column">
+              <i class="fas fa-bullhorn"></i>
+              <span>Notices</span>
+            </div>
+            <div class="settings__setting-column"></div>
+          </li>
+          <li class="settings__setting">
+            <div class="settings__setting-column">
+              <i class="fas fa-flask"></i>
+              <span>Kokoa Lab</span>
+            </div>
+            <div class="settings__setting-column"></div>
+          </li>
+          <li class="settings__setting">
+            <div class="settings__setting-column">
+              <i class="fas fa-info-circle"></i>
+              <span>Version</span>
+            </div>
+            <div class="settings__setting-column">Latest Version</div>
+          </li>
+        </ul>
+        <div class="settings__logout">
+          <a class="settings__logout-btn" href="index.html">Log Out</a>
+        </div>
+      </div>
     </main>
 
     <nav class="nav">
@@ -89,6 +94,10 @@
         </li>
       </ul>
     </nav>
+
+    <div id="no-mobile">
+      <span>Your screen is too big.<br />Please use a small screen.</span>
+    </div>
 
     <script
       src="https://kit.fontawesome.com/46dc3f725a.js"

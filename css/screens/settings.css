@@ -17,3 +17,16 @@
 .settings__setting-column:last-child {
   opacity: 0.5;
 }
+
+.settings__logout-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: tomato;
+  cursor: pointer;
+  padding: 20px 0px;
+  border-radius: 5px;
+  border: none;
+  font-size: 18px;
+  margin: 30px;
+}
