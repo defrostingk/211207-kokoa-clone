@@ -6,6 +6,9 @@
   display: flex;
   justify-content: center;
   padding: 5px 3px;
+}
+
+.status-bar:not(.chat-screen) {
   background-color: #fafafa;
 }
 

@@ -7,18 +7,30 @@
   justify-content: space-between;
   align-items: center;
   padding: 15px 25px 25px 25px;
+}
+
+.alt-header:not(.chat-screen) {
   background-color: #fafafa;
 }
 
 .alt-header__title {
+  text-align: center;
   font-size: 28px;
   font-weight: 600;
 }
-/* 
+
+.alt-header__column {
+  width: 33vw;
+}
+
 .alt-header__column:first-child {
-  margin-right: auto;
+  text-align: left;
 }
 
 .alt-header__column:last-child {
-  margin-left: auto;
-} */
+  text-align: right;
+}
+
+.alt-header__column span {
+  margin-left: 25px;
+}
