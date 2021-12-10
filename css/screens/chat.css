@@ -2,10 +2,22 @@
   background-color: #abc1d1;
 }
 
+@keyframes fadeIn {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .main-chat {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.8s linear;
 }
 
 .chat__timestamp {
@@ -17,10 +29,23 @@
   margin-bottom: 25px;
 }
 
+@keyframes sendMessage {
+  from {
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
 .message-row {
   width: 100%;
   display: flex;
   margin-bottom: 25px;
+  transform: translateX(-50px);
+  opacity: 0;
+  animation: sendMessage 0.5s ease-in-out forwards;
 }
 
 .message-row img {
@@ -57,6 +82,10 @@
 
 .message-row--own {
   justify-content: flex-end;
+  transform: translateX(50px);
+  opacity: 0;
+  animation: sendMessage 0.5s ease-in-out forwards;
+  animation-delay: 0.8s;
 }
 
 .message-row--own .message__bubble {
@@ -81,6 +110,7 @@
   align-items: center;
   box-sizing: border-box;
   padding: 5px 25px;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply .reply__column:first-child {
@@ -101,18 +131,20 @@
   width: 100%;
   border: var(--main-border);
   border-radius: 20px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
 }
 
 .reply__column:last-child > i,
 .reply__column:last-child button {
   position: absolute;
-  right: -3px;
-  top: 2px;
+  right: 8px;
+  top: 4px;
 }
 
 .reply__column:last-child > i {
-  right: 40px;
-  top: 9px;
+  right: 45px;
+  top: 10px;
 }
 
 .reply__column button {
@@ -130,4 +162,25 @@
 .reply__column button:focus,
 .reply__column button:active {
   outline: none;
+}
+
+.reply .reply__column:first-child,
+.reply .fa-smile,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 94vw;
+  transform: translateX(-13%) translateY(-80px);
+}
+
+.reply:focus-within {
+  transform: translateY(80px);
 }
